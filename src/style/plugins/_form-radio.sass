@@ -1,0 +1,56 @@
+/* ----- Radio custom --------------------- */
+
+$radio-height: 16px
+$radio-border-color: tomato
+$radio-border: 1px solid $radio-border-color
+$radio-bg-color: tomato
+
+/* Radio */
+.radio
+  padding-left: 25px
+  position: relative
+  line-height: $radio-height
+
+input.radio__input
+  position: absolute
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
+
+.radio__box
+  position: absolute
+  top: 0
+  left: 0
+  width: $radio-height
+  height: $radio-height
+  overflow: hidden
+  background-color: $radio-bg-color
+  border: $radio-border
+  border-radius: 50%
+  padding: 2px
+  background-color: transparent
+
+/* Checked */
+
+.radio__input:checked + .radio__box
+  background-color: $radio-bg-color
+  background-clip: content-box
+
+/* Focused */
+
+.radio__input:focus + .radio__box
+  border-color: darken($radio-border-color, 20%)
+
+/* Disabled */
+
+.radio__input:disabled + .radio__box
+  border-color: #ccc
+  background-color: #ccc
+
+.radio__input:checked:disabled + .radio__box
+  background-clip: content-box
+
+/* ----- END Radio custom ------------------ */
+/*                                           */
+/*                                           */

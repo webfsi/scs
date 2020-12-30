@@ -1,0 +1,323 @@
+/* ----- Navigation -------------------- */
+/* -- Bread crumbs ------------------ */
+.bread-crumbs
+  padding: 0
+  list-style-type: none
+
+  li
+    display: inline-block
+    vertical-align: middle
+    font-family: $site-font-family-3
+    font-weight: normal
+    margin: 0
+    color: #fff
+    a
+      color: #fff
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+        color: darken(#fff, 10%)
+
+    &:before
+      content: '>'
+      margin: 0 7px 0 5px
+
+    &:first-child
+      &:before
+        display: none
+
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .bread-crumbs
+    li
+      font-size: 18px
+      line-height: 27px
+/* end media min width 768 pixels */
+
+
+/* -- Pagination -------------------- */
+.pagination
+  list-style-type: none
+
+  li
+    display: inline-block
+    vertical-align: middle
+    margin: 10px 5px
+
+  a
+    display: block
+    width: 30px
+    height: 30px
+    border-radius: 2px
+    background-color: $cl-gallery
+    line-height: 30px
+    text-align: center
+    text-decoration: none
+    &:hover
+      background-color: #fc8a00
+      color: #fff
+
+  &__prev,
+  &__next
+    a
+      width: auto
+      height: auto
+      border-radius: 0
+      background: none
+
+      &:hover
+        background: none
+        color: #000
+
+  &__active
+    a
+      background-color: #fc8a00
+      color: #fff
+
+
+/* -- Main menu --------------------- */
+.menu-open-wrapper-page
+  overflow: hidden
+  position: fixed
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+
+.burger-menu
+  display: block
+  position: absolute
+  right: 5px
+  top: 20px
+  z-index: 101
+  cursor: pointer
+  padding: 10px
+
+.burger-menu-box
+  display: block
+  width: 30px
+  padding: 8px 0
+
+.burger-menu-inner
+  display: block
+  position: relative
+  height: 3px
+  background-color: $burger-fill
+  background-image: $grad-btn
+  
+  border-radius: 3px
+  transition: transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19)
+
+  &:before,
+  &:after
+    content: ' '
+    position: absolute
+    left: 0
+    height: 3px
+    background-color: $burger-fill
+    background-image: $grad-btn
+    width: 100%
+    border-radius: 3px
+    transition-timing-function: ease
+    transition-duration: .15s
+    transition-property: transform
+
+  &:before
+    top: -8px
+    transition: top 75ms ease .12s, opacity 75ms ease
+
+  &:after
+    bottom: -8px
+    transition: bottom 75ms ease .12s, transform 75ms cubic-bezier(0.55, 0.055, 0.675, 0.19)
+
+.menu-burger--opened
+  .burger-menu
+    position: fixed
+
+  .burger-menu-inner
+    transition-delay: 0.12s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    transform: rotate(45deg)
+
+    &:before
+      top: 0
+      transition: top 75ms ease, opacity 75ms ease 0.12s
+      opacity: 0
+
+    &:after
+      bottom: 0
+      transition: bottom 75ms ease, transform 75ms cubic-bezier(0.215, 0.61, 0.355, 1) .12s
+      transform: rotate(-90deg)
+
+  .burger-menu-inner, .burger-menu-inner:after, .burger-menu-inner:before
+    background-color: $burger-fill-open
+    background-image: $grad-btn1
+    
+
+.menu-wrapper-fixed
+  position: fixed
+  top: 0
+  z-index: 100
+  height: 100%
+  width: 100%
+  left: -100%
+  transition: left 0.4s cubic-bezier(0.000, 0.995, 0.990, 1.000)
+
+.menu-open-wrapper
+  padding: 20px
+  height: 100%
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  transition: background 0.25s ease-out
+
+.menu-burger--opened
+  .menu-wrapper-fixed
+    left: 0
+
+  .menu-open-wrapper
+    background-color: $fill-menu
+
+  .menu-item
+    margin-left: 0
+    @for $i from 1 through 10
+      &:nth-child(#{$i})
+        transition-delay: (0.06s * $i) - 0.06s
+
+.header-nav
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
+  min-height: 100%
+
+.menu
+  margin: 0
+  padding: 0
+  list-style: none
+
+.menu-item
+  position: relative
+  margin-top: 20px
+  margin-bottom: 20px
+  padding: 0
+  list-style-type: none
+  font: $font-menu-item-mobile
+  color: #fff
+  width: 100%
+  margin-left: -100%
+  transition: all 0.4s cubic-bezier(0.000, 0.995, 0.990, 1.000)
+
+  &__link
+    color: #fff
+    text-decoration: none
+
+    &:hover
+      color: #fff
+
+
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .menu-burger--opened
+    .menu-open-wrapper
+      background-color: transparent
+      
+  .menu-open-wrapper-page
+    overflow: visible
+    position: relative
+    height: auto
+    width: auto
+
+  .menu-wrapper-fixed
+    position: relative
+    left: 0
+    top: 0
+    height: auto
+    transition: none
+    width: 100%
+
+  .menu-open-wrapper
+    background: none
+    padding: 0
+    height: auto
+    overflow: visible
+
+  .burger-menu
+    display: none
+
+  .header-nav
+    display: block
+
+  .menu
+    text-align: left
+    border-radius: 5px
+    margin-right: -8px
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    text-align: center
+
+  .menu-item
+    display: inline-block
+    vertical-align: middle
+    font: $font-menu-item
+    width: auto
+    margin: 0
+
+    &__link
+      display: block
+      padding: 10px 8px
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        bottom: 0
+        right: 100%
+        height: 1px
+        left: 0
+        transition: right 0.2s ease-in-out
+
+      &:hover
+        color: darken(#fff, 15%)
+        &:after
+          background: #fff $grad-btn
+          right: 0
+        
+
+  /* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .menu
+    margin-right: -10px
+  .menu-item
+    display: inline-block
+    vertical-align: middle
+    font-size: 14px
+    letter-spacing: 2px
+    &__link
+      padding: 20px 10px
+/* end media min width 1000 pixels */
+
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px)
+  .menu
+    margin-right: -15px
+  .menu-item
+    &__link
+      padding: 20px 15px
+/* end media min width 1200 pixels */
+
+/* Min width 1350 pixels */
+@media only screen and (min-width: 1350px)
+  .menu
+    margin-right: -18px
+  .menu-item
+    &__link
+      padding: 20px 18px
+/* end media min width 1350 pixels */
+
+/* ----- END Navigation ---------------- */
+/*                                       */
+/*                                       */

@@ -1,0 +1,194 @@
+/* ----- Shares ------------------- */
+.share-bl__img
+  max-width: 400px
+  margin: 0 auto 30px
+
+.share-bl
+  &__content
+    text-align: center
+  &__tt
+    font-family: $site-font-family-2
+    font-weight: bold
+    font-size: 22px
+    line-height: 28px
+    letter-spacing: 2px
+    margin-bottom: 20px
+
+.slider_share
+  .slider-slide
+    align-self: flex-start
+
+.share-slider-wrapp
+  padding-bottom: 60px
+  .slick-dots
+    bottom: -40px
+
+.pic-bl
+  display: flex
+  align-items: center
+  margin-bottom: 35px
+  &__img
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    overflow: hidden
+    margin-right: 20px
+    flex-shrink: 0
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__name
+    color: #C5C5C5
+
+.reviews-bl__img
+  max-width: 400px
+  margin: 0 auto 30px
+
+.quote-bl
+  position: relative
+  padding-top: 30px
+  &:after
+    content: ""
+    position: absolute
+    top: -1px
+    width: 240px
+    left: 50px
+    height: 2px
+    background-color: #666666
+  &:before
+    content: ""
+    position: absolute
+    top: -11px
+    left: 0
+    width: 24px
+    height: 23px
+    background: url(../img/quote.svg) center center no-repeat
+    background-size: 100% 100%
+
+.desc-list
+  li
+    margin-bottom: 20px
+  &__tt
+    font-weight: 500
+    color: #F8B28B
+    text-transform: uppercase
+  &__txt
+    color: #C5C5C5
+    
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .share-bl
+    display: flex
+    justify-content: space-between
+    &__img
+      order: 1
+      flex: 0 1 48%
+      margin: 0
+      max-width: none
+      
+      img
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &__content
+      flex: 0 1 48%
+      display: flex
+      justify-content: center
+      flex-direction: column
+      align-items: flex-start
+  .share-bl
+    &__content
+      text-align: left
+
+  .share-slider-wrapp
+    padding-bottom: 50px
+    .slick-dots
+      bottom: -60px
+
+  .share-bl
+    min-height: 330px
+
+  .section-st_share-bg
+    position: relative
+    z-index: 1
+    &:after
+      content: ""
+      position: absolute
+      height: 200px
+      top: 50%
+      right: 0
+      width: 40%
+      margin-top: -70px
+      background-color: rgba(130, 115, 115, 0.26)
+      z-index: -1
+
+  .share-bl__tt
+    margin-bottom: 40px
+    font-size: 30px
+    line-height: 1.2
+  .share-bl__content
+    p
+      margin-bottom: 40px
+
+  .desc-list
+    display: flex
+    justify-content: space-between
+    max-width: 850px
+    margin: 0 auto
+    li
+      margin-bottom: 20px
+    &__tt
+      font-weight: 500
+      color: #F8B28B
+      text-transform: uppercase
+    &__txt
+      color: #C5C5C5
+
+  .reviews-bl
+    display: flex
+    justify-content: space-between
+    min-height: 360px
+    margin-bottom: 40px
+    &__img
+      flex: 0 1 48%
+      max-width: none
+      margin: 0
+      img
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &__content
+      flex: 0 1 48%
+      display: flex
+      justify-content: center
+      align-items: flex-start
+      flex-direction: column
+      
+    
+/* end media min width 768 pixels */
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .share-bl
+    &__tt
+      font-size: 36px
+      line-height: 44px
+
+  .quote-bl
+    font-size: 20px
+    line-height: 35px
+
+  .share-bl__img
+    flex-basis: 44%
+  .reviews-bl__img
+    flex-basis: 46%
+  .share-bl__content
+    flex-basis: 51%
+  .share-bl__content p
+    margin-bottom: 50px
+/* end media min width 1000 pixels */
+/* ----- END Shares --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/

@@ -1,0 +1,140 @@
+/* ----- Page structure ---------------- */
+.clear
+  clear: both
+
+.group:after 
+  content: "."
+  clear: both
+  display: block
+  height: 0
+  visibility: hidden
+
+#wrapper
+  min-width: 320px
+  overflow: hidden
+
+.section-st
+  padding: 50px 0
+  &_dark
+    background-color: rgba(28, 28, 28, 0.1)
+
+.container
+  padding-left: 15px
+  padding-right: 15px
+  width: auto
+
+.visible-lap, .hidden-full, .hidden-mobile
+  display: none
+
+.txt-md_500
+  font-weight: 500
+
+.section-st_bg
+  background: url(../img/bg2.png) center center no-repeat
+  background-size: cover
+
+.cap-tt_mob
+  padding: 0 15px
+
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .hidden-mobile
+    display: block
+    
+  .hidden-tabl
+    display: none
+
+  .cap-section_tabl-right
+    text-align: right
+  .cap-section__line-left
+    font-size: 26px
+    line-height: 37px
+    overflow: hidden
+    
+    span
+      position: relative
+      &:after
+        content: ""
+        position: absolute
+        right: 100%
+        top: 16px
+        height: 1px
+        background: #666666
+        width: 160px
+        margin-right: 50px
+
+  .cap-tt_mob
+    display: none
+  /* end media min width 768 pixels */
+
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+
+  .cap-section__line-left
+    font-size: 36px
+
+  html, body
+    height: 100%
+
+  body
+    display: flex
+    flex-direction: column
+
+  #wrapper
+    flex: 1 0 auto
+
+  .footer
+    flex-shrink: 0
+
+  .section-st
+    padding: 50px 0
+
+  .visible-lap
+    display: block
+
+  .hidden-lap
+    display: none
+    
+  .hidden-tabl
+    display: block
+  /* end media min width 1000 pixels */
+
+
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px)
+  .section-st_lg
+    padding: 80px 0
+  .hidden-lap
+    display: block
+
+  .container
+    margin: 0 auto
+    max-width: 1200px
+  /* end media min width 1200 pixels */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

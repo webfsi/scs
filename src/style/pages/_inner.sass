@@ -1,0 +1,598 @@
+/* ----- inner ------------------- */
+.gallery-boxes
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -5px
+  &__item
+    flex: 0 1 50%
+    padding: 0 5px
+    margin-bottom: 10px
+
+a.gallery-box
+  &:hover
+    color: #fff
+    text-decoration: none
+    outline: none
+
+.gallery-box
+  position: relative
+  z-index: 1
+  height: 140px
+  display: block
+  text-decoration: none
+  outline: none
+  color: #fff
+  transition: all 0.2s ease-in-out
+  background-color: #333
+  
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &:hover
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4)
+    .gallery-box-open
+      opacity: 1
+
+.gallery-box-open
+  position: absolute
+  opacity: 0
+  transition: all 0.2s ease-in-out
+  
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 10px 5px
+  background-color: rgba(27, 26, 26, 0.6)
+
+.gallery-box-open__tt
+  font-size: 12px
+  line-height: 14px
+  color: #fff
+  font-weight: 500
+  margin-bottom: 5px
+
+.gallery-box-open__txt
+  font-size: 12px
+  line-height: 14px
+  color: #fff
+
+.gallery-box-open__right
+  display: none
+
+.slider-product
+  margin-bottom: 30px
+
+.product-img
+  display: block
+  outline: none
+  text-decoration: none
+  height: 200px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.product-img-thumb
+  width: 100%
+  height: 80px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.slider_product-thumb
+  .slick-list
+    margin: 0 -10px
+  .slick-slide
+    padding: 0 10px
+
+.slider-product-wrapp
+  padding-bottom: 85px
+  position: relative
+  .slick-dots
+    bottom: 23px
+  .slick-arrow
+    top: auto
+    margin: 0
+    bottom: 0
+
+.slider_product
+  position: static
+
+.box-slider_hidden
+  display: none
+
+.box-slider
+  padding: 20px 0
+
+.desc-list_prod
+  padding: 20px 0
+
+.list-info
+  &__item
+    margin-bottom: 40px
+  &__tt
+    font-family: $site-font-family-3
+    font-weight: 700
+    font-size: 22px
+    line-height: 27px
+    margin-bottom: 20px
+  p
+    color: #C5C5C5
+
+.contact-box
+  background: #46454C
+  border-radius: 8px
+  padding: 30px 15px
+  text-align: center
+
+.contact-boxes__item
+  margin-bottom: 20px
+  &:last-child
+    margin-bottom: 0
+
+.contact-box__name
+  background-image: linear-gradient(90deg, #C4774D 0%, #FBB68F 104.67%)
+  font-family: $site-font-family-3
+  font-weight: 700
+  font-size: 24px
+  line-height: 38px
+  margin-bottom: 8px
+
+.contact-box__txt
+  display: inline-block
+  text-decoration: none
+  color: #BFBFBF
+a.contact-box__txt
+  &:hover
+    color: #BFBFBF
+    text-decoration: underline
+  
+.grid-main-form__img
+  display: none
+
+.prod-boxes__item
+  margin-bottom: 40px
+
+.prod-box
+  &__img
+    max-width: 400px
+    margin-bottom: 20px
+  &__tt
+    font-size: 20px
+    font-family: $site-font-family-3
+    font-weight: 700
+    line-height: 30px
+    margin-bottom: 10px
+  p
+    color: #C5C5C5
+
+.txt-bl-line
+  padding-right: 40px
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    top: 10px
+    height: 1px
+    width: 40px
+    right: -15px
+    background-color: #959595
+
+.a-bl
+  padding-left: 40px
+  position: relative
+  &:after
+    content: ""
+    position: absolute
+    top: 20px
+    height: 1px
+    left: -15px
+    width: 40px
+    background-color: #959595
+  &__icon
+    margin-bottom: 20px
+  &__item
+    margin-bottom: 40px
+
+.txt-bl-line
+  margin-bottom: 50px
+
+.pers-bl__img
+  max-width: 400px  
+  margin-bottom: 30px
+
+.pers-bl
+  margin-bottom: 40px
+  &__quote
+    font-weight: normal
+    font-style: italic
+    font-family: $site-font-family-3
+    margin-bottom: 20px
+  &__tt
+    font-family: $site-font-family-3
+    font-weight: bold
+    margin-bottom: 5px
+    font-size: 16px
+    line-height: 1.3
+  &__txt
+    font-family: $site-font-family-3
+    font-weight: normal
+    color: #c5c5c5
+  &__name
+    margin-bottom: 20px
+
+.pers-value
+  text-align: center
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  &__name
+    font-family: $site-font-family-3
+    font-weight: bold
+    flex-basis: 100%
+    font-size: 20px
+    line-height: 1.3
+    margin-bottom: 20px
+
+  &__item
+    margin-bottom: 20px
+    padding: 0 5px
+    flex: 0 1 25%
+  &__tt
+    background-image: linear-gradient(90deg, #C4774D 0%, #FBB68F 104.67%)
+    font-family: $site-font-family-3
+    font-weight: bold
+    font-size: 28px
+    line-height: 1
+    margin-bottom: 5px
+  &__txt
+    font-family: $site-font-family-3
+    font-weight: 500
+    font-size: 10px
+    line-height: 1.3
+
+
+/* Min width 480 pixels */
+@media only screen and (min-width: 480px)
+  .gallery-boxes
+    &__item
+      flex-basis: 33.3%
+
+  .product-img
+    height: 310px
+
+  .list-info
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    
+    &__item
+      flex: 0 1 48%
+      margin-bottom: 40px
+
+  .a-bl
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__item
+      flex: 0 1 48%
+
+  .pers-value
+    &__item
+      margin-bottom: 20px
+      padding: 0 5px
+      flex: 0 1 25%
+    &__tt
+      font-size: 38px
+      margin-bottom: 10px
+    &__txt
+      font-size: 14px
+      line-height: 1.5
+/* end media min width 480 pixels */
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .gallery-box
+    height: 230px
+  .gallery-boxes
+    margin: 0 -10px
+    &__item
+      padding: 0 10px
+      margin-bottom: 20px
+
+  .gallery-box-open__right
+    display: block
+    flex-shrink: 0
+    margin-left: 20px
+
+  .gallery-box-open
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+  .gallery-box-open__link
+    transition: all 0.2s ease-in-out
+    &:hover
+      opacity: 0.8
+
+  .slider-product-wrapp
+    padding-left: 80px
+    padding-right: 80px
+    .slick-dots
+      left: 0
+      right: 0
+
+  .slider-product-wrapp
+    .slick-next
+      right: 0
+    .slick-prev
+      left: 0
+  .slider-product-wrapp .slick-arrow
+    top: 180px
+
+  .product-img-thumb
+    height: 120px
+
+  .product-img
+    height: 390px
+
+  .desc-list_prod
+    padding: 40px 0 30px
+
+  .list-info
+    padding: 40px 0 20px
+
+  .contact-boxes
+    display: flex
+    justify-content: center
+    margin: 0 -8px
+    &__item
+      flex: 0 1 auto
+      padding: 0 8px 
+
+  .grid-main-form
+    text-align: left
+    position: relative
+    .container
+      padding-right: 350px
+    &__img
+      position: absolute
+      display: block
+      top: 0
+      right: 0
+      bottom: 0
+      width: 320px
+      img
+        height: 100%
+        width: 100%
+        max-width: none
+        object-fit: cover
+    .cap-tt, .cap-section-sm, .form-group_btn
+      text-align: left
+    .form-st
+      margin-left: 0
+
+  .prod-box
+    &__tt
+      font-size: 26px
+      line-height: 51px
+      margin-bottom: 10px
+
+  .prod-boxes
+    &__item
+      display: flex
+      justify-content: space-between
+      .prod-box__img, .prod-box__content
+        flex: 0 1 48%
+        min-height: 300px
+      &:nth-child(even)
+        .prod-box__img
+          order: 1
+  .prod-box__img
+    padding: 10px 0 20px
+    max-width: none
+    margin-bottom: 0
+    img
+      height: 100%
+      width: 100%
+      object-fit: cover
+
+  .txt-bl-line:after
+    top: 19px
+
+  .a-bl:after
+    top: 30px
+
+  .pers-value
+    justify-content: flex-start
+    &__name
+      flex: 0 1 20%
+      text-align: left
+      display: flex
+      justify-content: center
+      flex-direction: column
+      border-right: 1px solid #fff
+      font-size: 24px 
+      line-height: 40px
+      
+    &__item
+      flex: 0 1 20%
+    &__tt
+      font-size: 38px
+      margin-bottom: 10px
+    &__txt
+      font-size: 14px
+      line-height: 1.5
+
+  .pers-bl
+    display: flex
+    justify-content: space-between
+    margin-bottom: 60px
+    &__img
+      order: 1
+      flex: 0 1 48%
+      max-width: none
+      margin: 0
+    &__content
+      flex: 0 1 48%
+
+  .pers-bl__quote
+    margin-bottom: 60px
+
+  .pers-bl__tt, .pers-bl__txt
+    font-size: 20px
+    line-height: 38px
+    margin-bottom: 0
+      
+/* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+
+  .contact-box__txt
+    font-size: 18px
+    line-height: 29px
+  .gallery-box
+    height: 300px
+
+  .gallery-box-open
+    padding: 16px 16px 10px
+  .gallery-box-open__tt
+    font-size: 18px
+    line-height: 26px
+    margin-bottom: 0
+
+  .gallery-box-open__txt
+    font-size: 14px
+    line-height: 26px
+
+  .slider-product-wrapp
+    padding-left: 105px
+    padding-right: 105px
+
+  .slider_product-thumb .slick-list
+    margin: 0 -20px
+  .slider_product-thumb .slick-slide
+    padding: 0 20px
+
+  .product-img
+    height: 450px
+
+  .slider-product-wrapp .slick-arrow
+    top: 190px
+
+  .list-info
+    padding: 60px 0 20px
+    max-width: 1070px
+    margin: 0 auto
+    &__item
+      margin-bottom: 70px
+      &:nth-last-child(-n+2)
+        margin-bottom: 0
+
+  .contact-box
+    min-width: 245px
+    padding: 40px 24px
+
+  .prod-box
+    &__tt
+      font-size: 30px
+      margin-bottom: 20px
+
+  .prod-boxes__item
+    margin-bottom: 80px
+    &:last-child
+      margin-bottom: 0
+
+  .prod-boxes
+    &__item
+      .prod-box__img
+        flex: 0 1 48%
+      .prod-box__content
+        flex: 0 1 46%
+
+  .txt-bl-line
+    padding-right: 190px
+    margin-bottom: 65px
+  .txt-bl-line:after
+    top: 24px
+    right: 0
+    width: 160px
+    height: 2px
+  .a-bl
+    padding-left: 190px
+    &__item
+      flex-basis: 46%
+    &:after
+      left: 0
+      width: 160px
+      height: 2px
+
+  .pers-bl
+    margin-bottom: 120px
+  .pers-bl__quote
+    font-size: 20px
+    line-height: 38px
+
+  .pers-value__name
+    font-size: 36px
+    line-height: 51px
+
+  .pers-value__tt
+    font-size: 48px
+    line-height: 56px
+    margin-bottom: 0
+
+  .pers-value__txt
+    font-size: 18px
+    line-height: 27px
+
+  .pers-bl__tt, .pers-bl__txt
+    font-size: 24px
+    line-height: 38px
+    margin-bottom: 0
+
+/* end media min width 1000 pixels */
+
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px)
+  .gallery-box
+    height: 360px
+
+  .product-img
+    height: 530px
+
+  .slider-product-wrapp .slick-arrow
+    top: 230px
+
+  .grid-main-form
+    .container
+      padding-right: 500px
+    &__img
+      width: 38%
+
+  .pers-bl__quote
+    font-size: 24px
+    line-height: 38px
+
+  .pers-value__item
+    flex: 0 1 212px
+  .pers-value__name
+    flex: 0 1 222px
+    margin-right: 100px
+
+  .pers-bl__content
+    flex: 0 1 52%
+  .pers-bl__img
+    flex: 0 1 44%
+
+  .pers-bl__quote
+    margin-bottom: 110px
+/* end media min width 1200 pixels */
+
+/* ----- END inner --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/

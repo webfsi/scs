@@ -1,0 +1,76 @@
+/* ----- Skills card ------------------- */
+.skills-cards
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  margin: 0 -5px
+  &__item
+    padding: 0 5px
+    margin-bottom: 10px
+    flex: 1 1 50%
+    .skills-card
+      height: 100%
+
+.skills-card
+  background-color: #46454C
+  border-radius: 8px
+  text-align: center
+  padding: 20px 10px
+  &__icon
+    margin-bottom: 20px
+    height: 50px
+    img
+      max-height: 100%
+    
+  &__tt
+    font-family: $site-font-family-3
+    font-weight: bold
+    font-size: 16px
+    line-height: 24px
+    text-transform: uppercase
+    margin-bottom: 15px
+  p
+    color: #C5C5C5
+    
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+
+  .skills-cards
+    margin: 0 -15px
+    &__item
+      padding: 0 15px
+      margin-bottom: 30px
+      flex: 0 1 33.3%
+
+  .skills-card
+    padding: 30px 15px 20px
+    &__icon
+      height: 60px
+/* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .skills-card__icon
+    margin-bottom: 30px
+  .skills-cards
+    margin: 0 -15px
+    &__item
+      padding: 0 30px
+      margin-bottom: 50px
+  
+  .skills-card
+    padding: 55px 40px 30px
+    &__tt
+      font-size: 22px
+      line-height: 37px
+/* end media min width 1000 pixels */
+
+/* Min width 1350 pixels */
+@media only screen and (min-width: 1350px)
+  .skills-cards
+    margin: 0 -30px
+/* end media min width 1350 pixels */
+/* ----- END Skills card --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/

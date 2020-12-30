@@ -1,0 +1,127 @@
+/* Navigation */
+$SL-nav-wh: 30px
+$SL-nav-arr-w: 8
+$SL-nav-arr-h: 12
+$SL-nav-arr-left: url(../img/arrow-left.svg)
+$SL-nav-arr-right: url(../img/arrow-right.svg)
+
+.slick-prev, .slick-next
+  font-size: 0
+  line-height: 0
+  position: absolute
+  z-index: 1
+  top: 50%
+  width: $SL-nav-wh
+  height: $SL-nav-wh
+  margin: -($SL-nav-wh/2) 0 0
+  background-color: transparent
+  padding: 0
+  border: none
+  outline: none
+  cursor: pointer
+  
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    margin: auto
+    background-repeat: no-repeat
+    background-position: center center
+
+.slick-prev
+  &:hover, &:focus
+    color: transparent
+    outline: none
+
+.slick-next
+  &:hover, &:focus
+    color: transparent
+    outline: none
+
+.slick-prev
+  left: -15px
+  &:before
+    background-image: $SL-nav-arr-left
+    
+.slick-next
+  right: -15px
+  &:before
+    background-image: $SL-nav-arr-right
+
+  
+.slick-disabled
+  cursor: default
+  
+.slick-prev.slick-disabled:before, .slick-next.slick-disabled:before
+  opacity: .3
+
+
+[dir='rtl'] .slick-prev
+  right: -25px
+  left: auto
+
+[dir='rtl'] .slick-next
+  right: auto
+  left: -25px
+
+.slick-slide
+  outline: none
+
+.nav-center
+  text-align: center
+  padding: 20px 0
+  .slick-arrow
+    position: relative
+    top: auto
+    left: auto
+    bottom: auto
+    right: auto
+    margin: 0 10px
+
+.nav-st
+  &_second
+    margin-bottom: 30px
+    .slick-arrow
+      position: relative
+      top: auto
+      left: auto
+      right: auto
+      bottom: auto
+      margin: 0
+  .slick-arrow
+    width: 60px
+    height: 60px
+    border: 1px solid #666666
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .nav-center
+    padding: 50px 0
+    .slick-arrow
+      margin: 0 20px
+/* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .slick-prev, .slick-next
+    &:before
+      transition: all 0.2s ease-in-out
+      
+    &:hover
+      &:before
+        transform: scale(1.2)
+  .slick-prev.slick-disabled:hover:before, .slick-next.slick-disabled:hover:before
+    transform: scale(1)
+
+  .nav-st
+    &_second
+      .slick-next
+        border-left: none
+        
+    .slick-arrow
+      width: 80px
+      height: 80px
+/* end media min width 1000 pixels */

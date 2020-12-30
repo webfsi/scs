@@ -1,0 +1,232 @@
+/* ----- Index page -------------------- */
+.section-st_order
+  background:  url(../img/order-bg.jpg) center center no-repeat
+  background-size: cover
+
+.order-bl
+  text-align: center
+
+.order-bl__nav
+  margin-top: 40px
+
+.grid-slider__info
+  padding: 20px 15px
+
+.grid-slider__carousel
+  margin-left: 15px
+
+a.works-bl
+  outline: none
+  &:hover
+    color: #fff
+    .works-bl-desc
+      background-color: rgba(27, 26, 26, 0.7)
+
+  .works-bl-desc__link
+    &:hover
+      transform: scale(1, 1.4)
+
+.works-bl
+  width: 260px
+  height: 250px
+  position: relative
+  display: block
+  text-decoration: none
+  color: #fff
+  transition: all 0.3s ease-in-out
+  
+  
+  >img
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__tt
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+  &__txt
+    font-size: 14px
+    line-height: 18px
+    margin-top: 6px
+  &-desc
+    position: absolute
+    opacity: 0
+    transition: all 0.3s ease-in-out
+    
+    bottom: 0
+    left: 0
+    right: 0
+    padding: 20px 15px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: rgba(27, 26, 26, 0.6)
+    &__info
+      flex-grow: 1
+      margin-right: 20px
+    &__link
+      flex-shrink: 0
+      text-decoration: none
+      display: block
+      outline: none
+      transition: all 0.2s ease-in-out
+
+.slider_works
+  .slick-current.slick-active
+    .works-bl
+      transform: scale(1)
+      &-desc
+        opacity: 1
+  
+  .works-bl
+    transform: scale(0.8)
+
+
+
+.slider-info
+  text-align: center
+
+.form-st_alone
+  max-width: 530px
+  margin: 0 auto
+  
+
+.cap-section-sm
+  text-align: center
+  margin-bottom: 40px
+  .title-site, h1, h2, h3, h4, h5, h6
+    font-family: $site-font-family-3
+    font-weight: 700
+
+  p
+    color: #BFBFBF
+
+.form-group_btn
+  margin-top: 35px
+
+/* Min width 480 pixels */
+@media only screen and (min-width: 480px)
+  .works-bl
+    width: 390px
+    height: 300px
+/* end media min width 480 pixels */
+      
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .cap-section-sm
+    .title-site_h5, h5
+      font-size: 24px
+      line-height: 38px
+  .grid-slider
+    display: flex
+    overflow: hidden
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      top: 100px
+      left: 0
+      width: 30px
+      height: 2px
+      background-color: #666666
+    &__info
+      flex: 0 0 200px
+      display: flex
+      justify-content: space-between
+      flex-direction: column
+      align-items: flex-start
+      padding-top: 0
+      padding-bottom: 0
+      text-align: left
+      .nav-st
+        order: 1
+        margin-bottom: 0
+    &__carousel
+      flex-grow: 1
+      order: 1
+      margin-left: 0
+
+  .works-bl
+    width: 450px
+    height: 380px
+    &__tt
+      font-size: 22px
+      line-height: 32px
+    &__txt
+      font-size: 18px
+      line-height: 32px
+  .order-bl
+    text-align: left
+  .order-bl__grid
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    .order-bl__content
+      flex: 0 1 50%
+      p
+        margin-bottom: 0
+      >*+*
+        margin-top: 20px
+
+    .order-bl__nav
+      flex: 0 1 auto
+
+  .order-bl__nav
+    margin-top: 0
+    padding: 6px 0
+    &:before
+      content: ""
+      display: inline-block
+      vertical-align: middle
+      height: 16px
+      width: 90px
+      background:  url(../img/arrow-right-long.svg) center center no-repeat
+      background-size: 100% 100%
+      margin-right: 54px
+
+  .works-bl-desc
+    padding: 14px 44px
+
+  .slider_works
+    .works-bl
+      transform: scale(0.87)
+/* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  
+  .grid-slider
+    &:after
+      top: 170px
+    &__info
+      flex: 0 0 320px
+  .order-bl__grid
+    .order-bl__content
+      flex: 0 1 60%
+
+  .works-bl
+    width: 580px
+    height: 430px
+  .slider-info
+    .link-st
+      margin-bottom: 100px
+/* end media min width 1000 pixels */
+
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px)
+  .grid-slider
+    &:after
+      width: calc((100vw - 1170px) / 2 + 50px)
+    &__info
+      flex-basis: calc((100vw - 1170px) / 2 + 320px)
+      padding-left: calc((100vw - 1170px) / 2)
+
+  .works-bl
+    width: 705px
+    height: 530px
+/* end media min width 1200 pixels */
+
+/* ----- END index page /--------------- */
+/*                                       */
+/*                                       */

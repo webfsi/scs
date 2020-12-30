@@ -1,0 +1,58 @@
+/* ----- Checkbox custom ------------------- */
+
+$check-height: 16px
+$check-border-color: #eaeaea
+$check-border: 1px solid $check-border-color
+$check-bg-color: #fff
+$check-bg-size: 10px 10px
+$check-bg-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' id='Layer_1' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve' width='512' height='512' class=''%3E%3Cg%3E%3Cg%3E%3Cg%3E%3Cpath d='M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0 c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7 C514.5,101.703,514.499,85.494,504.502,75.496z' data-original='%23000000' class='active-path' data-old_color='%23000000' style='fill:%23232323'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+
+/* Check */
+.check
+  padding-left: 25px
+  position: relative
+  line-height: $check-height
+
+input.check__input
+  position: absolute
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
+
+.check__box
+  position: absolute
+  top: 0
+  left: 0
+  width: $check-height
+  height: $check-height
+  overflow: hidden
+  background-color: $check-bg-color
+  background-repeat: no-repeat
+  background-position: center center
+  border: $check-border
+
+/* Checked */
+
+.check__input:checked + .check__box
+  background-color: $check-bg-color
+  background-image: $check-bg-image
+  background-size: $check-bg-size
+
+/* Focused */
+
+.check__input:focus + .check__box
+  border-color: darken($check-border-color, 20%)
+
+/* Disabled */
+
+.check__input:disabled + .check__box
+  border-color: darken($check-border-color, 20%)
+  background-color: #ccc
+
+.check__input:checked:disabled + .check__box
+  background-color: #ccc
+
+/* ----- END Checkbox custom --------------- */
+/*                                           */
+/*                                           */

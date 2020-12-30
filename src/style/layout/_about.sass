@@ -1,0 +1,125 @@
+/* ----- about ------------------- */
+.inner-bl .txt-md
+  margin-bottom: 20px
+
+.inner-bl-content__push-left
+  padding-left: 20px
+  >*+*
+    margin-top: 20px
+
+.inner-bl__img
+  text-align: center
+  max-width: 400px
+  margin: 0 auto 30px
+
+.about-section
+  position: relative
+  overflow: hidden
+  padding: 50px 0
+
+.txt-line
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    left: -35px
+    height: 2px
+    top: 10px
+    width: 15px
+    background-color: #666666
+
+.txt-shadow
+  color: #C5C5C5
+  
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .inner-bl
+    padding-right: 340px
+    &__img
+      position: absolute
+      top: 50px
+      right: 0
+      bottom: 50px
+      width: 300px
+      overflow: hidden
+      margin-bottom: 0
+      img
+        height: 100%
+        width: 100%
+        object-fit: cover
+
+  .txt-line
+    &:before
+      left: -55px
+      width: 25px
+      top: 13px
+
+  .inner-bl-content__push-left
+    padding-left: 40px
+
+  .inner-bl
+    min-height: 335px
+/* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .inner-bl
+    padding-right: 56%
+    &__img
+      left: 50%
+      right: 0
+      max-width: none
+      width: auto
+
+  .cap-tt
+    .title-site, h1, h2, h3, h4, h5, h6
+      margin-bottom: 30px
+
+  .inner-bl-content__push-left
+    padding-left: 60px
+    .txt-md
+      margin-bottom: 30px
+    .link-st
+      margin-top: 60px
+
+  .txt-line
+    &:before
+      left: -75px
+      width: 45px
+      top: 17px
+
+  .about-section
+    padding: 70px 0
+  .inner-bl
+    &__img
+      top: 70px
+      bottom: 70px
+
+  .inner-bl
+    min-height: 505px
+/* end media min width 1000 pixels */
+
+/* Min width 1200 pixels */
+@media only screen and (min-width: 1200px)
+  .txt-line
+    &:before
+      left: -1000px
+      width: 930px
+
+  .about-section
+    padding: 150px 0 70px
+  .inner-bl
+    &__img
+      top: 150px
+      bottom: 70px
+
+  .inner-bl-content__push-left
+    padding-left: 100px
+
+  .cap-tt .title-site, .cap-tt h1, .cap-tt h2, .cap-tt h3, .cap-tt h4, .cap-tt h5, .cap-tt h6
+    margin-bottom: 38px
+/* end media min width 1200 pixels */
+/* ----- END about --------------- */
+/*-------------------------------------*/
+/*-------------------------------------*/

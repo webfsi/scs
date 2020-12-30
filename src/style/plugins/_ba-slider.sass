@@ -1,0 +1,103 @@
+/* ----- slider img scroll ------------------- */
+.ba-slider 
+  position: relative
+  overflow: hidden
+  width: 100%
+  &__inner
+    width: 100%
+    height: 100%
+    position: relative
+    height: 300px
+    border-radius: 8px
+    overflow: hidden
+
+
+.ba-slider img 
+  width: 100%
+  height: 100%
+  object-fit: cover
+  display: block
+  max-width: none
+
+.resize 
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 50%
+  overflow: hidden
+
+.handle
+  position: absolute 
+  left: 50%
+  top: 0
+  bottom: 0
+  width: 2px
+  border-radius: 5px
+  background-color: #fff
+  margin-left: -1px
+  cursor: ew-resize
+
+.handle:after
+  position: absolute
+  top: 50%
+  width: 30px
+  height: 30px
+  margin: -15px 0 0 -14px
+  content: ""
+  background: linear-gradient(90deg, #C4774D 0%, #FBB68F 104.67%)
+  border: 3px solid #fff
+  border-radius: 50%
+  transition: all 0.3s ease
+  box-sizing: border-box
+
+.draggabl:after
+  transform: scale(1.3)
+
+// NEXT sstyle
+
+.ba-slider-wrapp
+  position: relative
+
+.ba-slider__txt
+  background: #6B6A71
+  color: #fff
+  font-weight: normal
+  font-family: $site-font-family
+  line-height: 1
+  padding: 6px 15px
+  position: absolute
+  bottom: 0
+  &_from
+    left: 0
+    border-radius: 0px 8px
+  &_to
+    right: 0
+    border-radius: 8px 0px
+
+.slider-one-wrapp
+  max-width: 940px
+  margin: 0 auto
+  
+
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .ba-slider__txt
+    font-size: 16px
+    padding: 11px 20px
+    min-width: 120px
+    text-align: center
+
+  .ba-slider__inner
+    height: 450px
+
+  .cap-section_tabl-right
+    .title-site_h2, h2
+      margin-bottom: 45px
+  /* end media min width 768 pixels */
+
+
+/* ----- END slider img scroll --------------- */
+/*                                             */
+/*                                             */

@@ -1,0 +1,35 @@
+/* ----- Header ------------------------ */
+.header
+  position: relative
+  padding: 10px 0
+
+.logo
+  >*+*
+    margin-top: 9px
+  &__txt
+    font-family: $site-font-family-2
+    font-size: 14px
+    line-height: 1
+    font-weight: 600
+    letter-spacing: 1.8px
+    display: block
+  a
+    display: block
+    outline: none
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .header
+    padding: 19px 0
+    &__inner
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .head-menu
+        margin-left: auto
+        
+/* end media min width 768 pixels */
+
+/* ----- END Header -------------------- */
+/*                                       */
+/*                                       */

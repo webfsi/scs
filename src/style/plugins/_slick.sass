@@ -1,0 +1,61 @@
+/* ----- Slick slider ------------------- */
+/* Slider */
+.slider_float
+  .slick-track
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+    &:before
+      display: table
+      content: ''
+
+    &:after
+      display: table
+      content: ''
+      clear: both
+
+  .slick-slide
+    float: left
+    height: 100%
+
+  [dir='rtl'] .slick-slide
+    float: right
+
+.slider_h-center
+  .slick-track
+    align-items: center
+    justify-content: center
+
+.slider-slide
+  &:nth-child(n+2)
+    display: none
+  &.slick-slide
+    display: block
+
+
+@import standard/slick-standard
+
+/* Slider NAV */
+
+@import slider/nav
+
+@import slider/dots
+
+
+
+.slider-nav
+  text-align: center
+  .slick-dots
+    position: relative
+    bottom: auto
+  .slick-prev, .slick-next
+    position: relative
+    top: auto
+    left: auto
+    right: auto
+
+
+/* ----- END Slick slider --------------- */
+/*                                        */
+/*                                        */

@@ -1,0 +1,59 @@
+/* DOTS */
+$SL-dot-wh: 16px
+$SL-dot-margin: 4
+$wh-dots: $SL-dot-wh+($SL-dot-margin*2)
+
+.slick-dots
+  position: absolute
+  width: 100%
+  text-align: center
+  bottom: -30px
+
+  li
+    padding: 0
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    cursor: pointer
+    margin: 0 $SL-dot-margin+(px)
+
+    button
+      font-size: 0
+      line-height: 0
+      padding: 0
+      margin: 0
+      border: none
+      box-shadow: none
+      outline: none
+      display: inline-block
+      position: relative
+      border-radius: 50%
+      padding: 5px
+      background-clip: content-box
+
+      background-color: #fff
+      width: $SL-dot-wh
+      height: $SL-dot-wh
+      border: 1px solid transparent
+
+
+      &:hover:before, &:focus:before
+        opacity: 1
+
+      &:before
+        content: ' '
+        background-color: transparent
+        border-radius: 50%
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-top: -($wh-dots/2)+(px)
+        margin-left: -($wh-dots/2)+(px)
+        width: $wh-dots+(px)
+        height: $wh-dots+(px)
+
+    &.slick-active button
+      background-color: #DB883A
+      border-color: #DB883A
+      
+

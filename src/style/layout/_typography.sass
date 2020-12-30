@@ -1,0 +1,241 @@
+/* ----- Typography -------------------- */
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+body
+  width: 100%
+  margin: 0
+  padding: 0
+  background: $site-fill-color
+  font: $site-font-style $site-font-weight $body-text-size $site-font-family
+  color: $site-text-color
+  letter-spacing: 0.5px
+
+.title-site, h1, h2, h3, h4, h5, h6
+  display: block
+  margin: 0 0 15px
+  padding: 0
+  font-family: $title-font-weight
+  font-weight: $title-font-family
+  line-height: $title-line-height
+  color: $site-title-color
+
+h1, .title-site_h1
+  font-size: $site-h1-size-mobile
+  margin-bottom: 20px
+
+h2, .title-site_h2
+  font-size: $site-h2-size-mobile
+  margin-bottom: 20px
+
+h3, .title-site_h3
+  font-size: $site-h3-size-mobile
+
+h4, .title-site_h4
+  font-size: $site-h4-size-mobile
+
+h5, .title-site_h5
+  font-size: $site-h5-size-mobile
+  line-height: 1.3em
+
+h6, .title-site_h6
+  font-size: $site-h6-size-mobile
+  line-height: 1.3em
+
+.title-site_grad
+  background-color: #E1E1E1
+  background-image: linear-gradient(89.96deg, #E1E1E1 0.03%, #A7A7A7 88.05%)
+  background-size: 100%
+  -webkit-background-clip: text
+  -moz-background-clip: text
+  -webkit-text-fill-color: transparent 
+  -moz-text-fill-color: transparent
+
+.txt-grad
+  background-color: #E1E1E1
+  background-image: linear-gradient(89.96deg, #E1E1E1 0.03%, #A7A7A7 88.05%)
+  background-size: 100%
+  -webkit-background-clip: text
+  -moz-background-clip: text
+  -webkit-text-fill-color: transparent 
+  -moz-text-fill-color: transparent
+
+.cap-tt, .cap-section
+  .title-site, h1, h2, h3, h4, h5, h6
+    background-color: #E1E1E1
+    background-image: linear-gradient(89.96deg, #E1E1E1 0.03%, #A7A7A7 88.05%)
+    background-size: 100% 100%
+    -webkit-background-clip: text
+    -moz-background-clip: text
+    -webkit-text-fill-color: transparent 
+    -moz-text-fill-color: transparent
+
+.cap-section
+  text-align: center
+  margin-bottom: 40px
+
+.skills-section
+  padding: 40px 0 50px
+
+
+.link-st
+  text-transform: uppercase
+  letter-spacing: 0.5px
+  font-weight: 500
+  color: #F8B28B
+  display: inline-block
+  text-decoration: none
+  border-bottom: 1px solid #F8B28B
+  &:hover
+    border-bottom-color: transparent
+    color: #F8B28B
+    text-decoration: none
+
+.txt-md
+  font-family: $site-font-family-3
+  font-weight: 700
+  font-size: 16px
+  line-height: 22px
+  
+
+ul, ol
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+li
+  margin: 0
+  padding: 0
+
+p
+  margin: 0 0 20px
+
+.text-bl
+  ul
+    margin-bottom: 20px
+    list-style-type: disc
+    padding-left: 15px
+
+  ol
+    margin-bottom: 20px
+    list-style-type: decimal
+    padding-left: 15px
+
+  li
+    margin-bottom: 10px
+
+.text_center
+  text-align: center
+
+.text_left
+  text-align: left
+
+.text_right
+  text-align: right
+
+.text_uppercase
+  text-transform: uppercase
+
+.text_hidden
+  display: block
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+
+
+img
+  vertical-align: middle
+  max-width: 100%
+
+a
+  color: $color-link
+  text-decoration: underline
+
+  &:hover
+    text-decoration: none
+    color: $color-h-link
+
+
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  h1, .title-site_h1
+    font-size: $site-h1-size
+
+  h2, .title-site_h2
+    font-size: $site-h2-size
+
+  h3, .title-site_h3
+    font-size: $site-h3-size
+
+  h4, .title-site_h4
+    font-size: $site-h4-size
+
+  h5, .title-site_h5
+    font-size: $site-h5-size
+
+  h6, .title-site_h6
+    font-size: $site-h6-size
+
+  .text-bl-grid
+    display: flex
+    justify-content: space-between
+
+    &__half-col
+      width: 48%
+
+  body
+    font-size: 16px
+    line-height: 20px
+
+  .txt-md
+    font-size: 18px
+    line-height: 26px
+
+  .title-site, h1, h2, h3, h4, h5, h6
+    letter-spacing: 2px
+  /* end media min width 768 pixels */
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .txt-md
+    font-size: 22px
+    line-height: 37px
+
+  body
+    font-size: 16px
+    line-height: 29px
+
+  h1, .title-site_h1
+    font-size: 64px
+
+  h2, .title-site_h2
+    font-size: 54px
+
+  h3, .title-site_h3
+    font-size: 48px
+
+  h4, .title-site_h4
+    font-size: 40px
+
+  h5, .title-site_h5
+    font-size: 36px
+
+  h6, .title-site_h6
+    font-size: 22px
+
+  .cap-section
+    margin-bottom: 45px
+    .title-site, h1, h2, h3, h4, h5, h6
+      margin-bottom: 30px
+/* end media min width 1000 pixels */
+/* ----- END Typography ---------------- */
+/*                                       */
+/*                                       */
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+/* ----- Forms ------------------------- */
+.st-form
+  margin-bottom: 20px
+
+  &__tt
+    display: block
+
+
+.form-group
+  margin-bottom: 20px
+
+  &__label
+    display: block
+    margin-bottom: 10px
+    font-size: 14px
+    line-height: 18px
+
+  &_inline
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .form-group__label
+      min-width: 140px
+      max-width: 140px
+      padding: 0 10px 0 0
+      margin: 5px 0
+
+.form-group_check
+  display: flex
+  justify-content: flex-start
+  .form-group__label
+    order: 1
+
+
+/* Min width 768 pixels */
+@media only screen and (min-width: 768px)
+  .grid-st
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__half-col
+      flex: 0 1 48%
+    &_first-sm
+      .grid-st__half-col
+        flex-basis: 50%
+        &:first-child
+          flex-basis: 43%
+  .form-group-grid
+    display: flex
+    justify-content: space-between
+
+    &__half-col
+      width: 48.5%
+
+    &__three-col
+      width: 31.3%
+
+    &__four-col
+      width: 22.8%
+  /* end media min width 768 pixels */
+
+/* Min width 1000 pixels */
+@media only screen and (min-width: 1000px)
+  .form-group-set
+    display: flex
+    justify-content: space-between
+
+  .form-st_lg
+    .form-group
+      margin-bottom: 40px
+    .form-group__field
+      height: 50px
+/* end media min width 1000 pixels */
+
+
+/* ----- END Forms --------------------- */
+/*                                       */
+/*                                       */
+
+
